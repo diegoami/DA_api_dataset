@@ -31,7 +31,28 @@ Collection of APIs and Datasets for selected topics
 
 ### WIKIDATA
 
-* **https://stackoverflow.com/questions/32166730/how-to-get-a-list-of-all-films-on-wikidata**
+#### MOVIES
+
+```
+SELECT ?q WHERE { ?q wdt:P31 wd:Q11424. }
+```
+
+#### ACTORS
+
+```
+SELECT ?human  WHERE {
+  ?human wdt:P31 wd:Q5;
+    wdt:P106 wd:Q33999.
+}
+```
+
+```
+SELECT ?human ?given_name WHERE {
+  ?human wdt:P31 wd:Q5;
+    wdt:P106 wd:Q33999.
+  OPTIONAL{?human wdt:P735 ?given_name .}    
+}
+```
 
 ## COMPUTER GAMES
 
@@ -45,6 +66,14 @@ Collection of APIs and Datasets for selected topics
 ```
 SELECT ?q WHERE { ?q wdt:P31 wd:Q7889. }
 ```
+
+## BOOKS
+
+### API
+
+* **https://developers.google.com/books/**
+
+
 ## LANGUAGES
 
 ## GEOGRAPHY
