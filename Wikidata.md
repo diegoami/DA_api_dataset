@@ -47,3 +47,9 @@ SELECT ?q ?cast_member ?cast_memberLabel WHERE {
 }
 ```
 
+```
+SELECT ?q ?cast_member ?cast_memberLabel WHERE {
+  ?q wdt:P31 wd:Q5398426.
+  OPTIONAL { ?q wdt:P161 ?cast_member. }
+}
+```
