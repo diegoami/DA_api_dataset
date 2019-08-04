@@ -34,12 +34,15 @@ SELECT ?q WHERE { ?q wdt:P31 wd:Q11424. }
 
 ### SUBJECT WITH OPTION
 
+Movie
 ```
 SELECT ?q ?cast_member ?cast_memberLabel WHERE {
   ?q wdt:P31 wd:Q11424.
   OPTIONAL { ?q wdt:P161 ?cast_member. }
 }
 ```
+
+Video game
 ```
 SELECT ?q ?cast_member ?cast_memberLabel WHERE {
   ?q wdt:P31 wd:Q7889.
@@ -47,9 +50,18 @@ SELECT ?q ?cast_member ?cast_memberLabel WHERE {
 }
 ```
 
+Tv Show
 ```
 SELECT ?q ?cast_member ?cast_memberLabel WHERE {
   ?q wdt:P31 wd:Q5398426.
   OPTIONAL { ?q wdt:P161 ?cast_member. }
+}
+```
+
+Animated Film
+```
+SELECT ?q ?cast_member ?cast_memberLabel WHERE {
+  ?q wdt:P31 wd:Q202866.
+  OPTIONAL { ?q wdt:P725 ?cast_member. }
 }
 ```
