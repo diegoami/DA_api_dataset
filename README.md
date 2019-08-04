@@ -67,17 +67,38 @@ SELECT ?human ?given_name WHERE {
 SELECT ?q WHERE { ?q wdt:P31 wd:Q7889. }
 ```
 
+### STEAM
+
+* **https://www.reddit.com/r/Steam/comments/6nw75r/is_there_anyway_to_get_all_the_appid_of_steam/ **
+* **https://steamcommunity.com/dev**
+
+
 ## BOOKS
 
 ### API
 
 * **https://developers.google.com/books/**
+**
+### WIKIDATA
+
+```
+SELECT ?q WHERE { ?q wdt:P31 wd:Q571. }
+```
+
+## SONGS
+
+### WIKIMEDIA
+
+
+```
+SELECT ?q WHERE { ?q wdt:P31 wd:Q7366. }
+55533 songs
+```
 
 
 ## LANGUAGES
 
 ## GEOGRAPHY
 
-## LYRICS
 
 ## CHESS
