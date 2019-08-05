@@ -31,6 +31,7 @@ SELECT ?q WHERE { ?q wdt:P31 wd:Q11424. }
 * books(Q571): 68279
 * song(Q7366): 55533
 * video game(Q7889) : 38003
+* website(Q35127): 9271
 
 ### SUBJECT WITH OPTION
 
