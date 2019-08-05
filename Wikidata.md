@@ -41,6 +41,15 @@ SELECT ?q ?cast_member ?cast_memberLabel WHERE {
   ?q wdt:P31 wd:Q11424.
   OPTIONAL { ?q wdt:P161 ?cast_member. }
 }
+945970
+SELECT ?q ?qLabel ?cast_member ?cast_memberLabel WHERE {
+  ?q wdt:P31 wd:Q11424.
+  ?q wdt:P161 ?cast_member.
+  SERVICE wikibase:label {
+     bd:serviceParam wikibase:language "en" .
+  }
+}
+LIMIT 100
 ```
 
 Video game
