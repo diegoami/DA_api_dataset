@@ -1,5 +1,20 @@
 # WIKIMEDIA
 
+# QUERY IN CURL
+
+```
+curl --header "Accept: application/sparql-results+json"  -G 'https://query.wikidata.org/sparql' --data-urlencode query='
+SELECT ?q ?qLabel ?cast_member ?cast_memberLabel WHERE {
+  ?q wdt:P31 wd:Q11424.
+  ?q wdt:P161 ?cast_member.
+  SERVICE wikibase:label {
+     bd:serviceParam wikibase:language "en" .
+  }
+}
+LIMIT 100
+'
+```
+
 ## HUMANS
 
 ### QUERY
