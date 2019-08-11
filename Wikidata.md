@@ -90,3 +90,92 @@ SELECT ?q ?cast_member ?cast_memberLabel WHERE {
   OPTIONAL { ?q wdt:P725 ?cast_member. }
 }
 ```
+
+### ROLES IN MOVIE
+
+```
+SELECT ?film ?role ?person  WHERE {
+  ?film wdt:P31 wd:Q11424;
+    wdt:P57|wdt:P161|wdt:P162|wdt:P1431|wdt:P58|wdt:P344|wdt:P1040|wdt:P86|wdt:P2515|wdt:p2554|wdt:P170|wdt:P725 ?person.
+  }
+  ?person ?role ?film.
+  
+}
+```
+>1m 
+
+### ROLES IN VIDEO SHOW
+
+```
+SELECT ?tv_series ?role ?person  WHERE {
+  ?tv_series wdt:P31 wd:Q5398426;
+    wdt:P57|wdt:P161|wdt:P162|wdt:P1431|wdt:P58|wdt:P344|wdt:P1040|wdt:P86|wdt:P2515|wdt:p2554|wdt:P170|wdt:P725 ?person.
+  ?tv_series ?role ?person.
+}
+```
+
+### ROLES IN ANIMATED MOVIES 
+
+```
+
+SELECT ?animated_movie ?role ?person  WHERE {
+  ?animated_movie wdt:P31 wd:Q202866;
+    wdt:P57|wdt:P161|wdt:P162|wdt:P1431|wdt:P58|wdt:P344|wdt:P1040|wdt:P86|wdt:P2515|wdt:p2554|wdt:P170|wdt:P725 ?person.
+  ?animated_movie ?role ?person.
+}
+
+```
+10319
+
+
+### ROLES IN SONGS
+
+```
+SELECT ?person ?role ?song WHERE {
+ 
+  ?person wdt:P175|wdt:P86|wdt:p676 ?song;
+          wdt:P31/wdt:P279* wd:Q2188189.
+  ?person ?role ?song.
+  
+}
+# 413194
+```
+
+
+### ROLES IN GAMES
+
+```
+SELECT ?game ?role ?person  WHERE {
+  ?game wdt:P31 wd:Q7889;
+    wdt:P50|wdt:P58|wdt:P162|wdt:P86|wdt:P725  ?person.
+  ?game ?role ?person.
+}
+```
+6640
+
+### VOICE CHARACTERS IN GAMES
+
+```
+SELECT ?game ?character  ?person  WHERE {
+  ?game wdt:P31 wd:Q7889.
+  ?game wdt:P674 ?character. 
+  ?character wdt:P725 ?person.
+}
+
+```
+
+### BOOKS
+
+```
+
+SELECT ?book ?role ?person  WHERE {
+  
+  
+  ?book wdt:P31 wd:Q571.
+  ?book wdt:P50|wdt:P2085381 ?person.
+  ?book ?role ?person
+}
+
+```
+
+
